@@ -1,0 +1,111 @@
+h1{
+    background-color:white;
+    font-size:35px;
+    text-align: center;
+    padding:2px;
+    color:#7cc4c4;
+}
+p{
+    font-size:20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.simg {
+    width: 100%; /* Full width of the container for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Padding around the container */
+    font-size:25px;
+    text-align: center;
+}
+
+/* Container Item Styling */
+.container > div {
+    flex: 1 1 calc(33.333% - 40px); /* 3 items per row with gap consideration */
+    text-align: center; /* Center-align text and images */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside each item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+    position: relative; /* Position relative for popup positioning */
+    overflow:hidden;
+}
+
+/* Hover Effects */
+.container > div:hover .simg {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Popup Label Styling */
+.container > div .popup-label {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the container */
+    bottom: 10px; /* Positioned at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    color: white; /* White text color */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+}
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px; /* Adjusted font size for tablets */
+        padding: 5px; /* Increased padding for better spacing */
+    }
+
+    p {
+        font-size: 18px; /* Adjusted font size for tablets */
+    }
+
+    .container {
+        font-size: 20px; /* Adjusted font size for tablets */
+        padding: 10px; /* Reduced padding for tablets */
+    }
+
+    .container > div {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+        padding: 15px; /* Increased padding for better spacing on tablets */
+    }
+
+    .simg {
+        border-radius: 8px; /* Slightly smaller border-radius for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Adjusted font size for mobile */
+        padding: 5px; /* Reduced padding for mobile */
+    }
+
+    p {
+        font-size: 16px; /* Adjusted font size for mobile */
+    }
+
+    .container {
+        font-size: 16px; /* Adjusted font size for mobile */
+        padding: 5px; /* Reduced padding for mobile */
+    }
+
+    .container > div {
+        flex: 1 1 100%; /* 1 item per row on mobile */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    .simg {
+        border-radius: 5px; /* Further reduced border-radius for mobile */
+    }
+}

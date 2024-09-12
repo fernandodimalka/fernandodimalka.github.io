@@ -1,0 +1,228 @@
+body{
+    margin:0px;
+    background-color:#97d1e9;
+}
+.logo img {
+    height: 60px;           /* Adjust logo height */
+    margin-right: 10px;     /* Space between logo and menu */
+}
+nav {
+    background-color:#7cc4c4;/* Dark background color */
+    top: 0;                    /* Align to the top */
+    left: 0;                   /* Align to the left */
+    width: 100%;               /* Full width */
+    z-index: 1000;             /* Ensure it stays above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding:;            /* Remove default padding */
+    margin:10px;             /* Remove default margin */
+    display: flex;         /* Display list items in a row */
+    justify-content:right; /* Center items horizontally */
+    font-size:20px;
+    align-self: center;
+
+}
+
+nav ul li {
+    margin: 0;             /* Remove margin from list items */
+}
+
+nav ul li a {
+    display: block;        /* Make links block elements */
+    color: #fff;           /* White text color */
+    text-align: center;    /* Center text horizontally */
+    padding: 14px 20px;    /* Add padding around text */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li a:hover {
+    background-color: #046c84; /* Change background on hover */
+}
+.mimg {
+    width:800px;
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+    border:5px solid;
+    border-color: #fff;
+}
+.main1{
+    display: inline-block;
+    overflow:hidden;
+    display: flex;
+}
+.main1 img{
+    display:block;
+    transition:transfrom 0.3s ease;
+    border-radius: 5px;
+}
+
+.main1 img:hover{
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+.mhead{
+    text-align: center;
+    color:#fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.mhead2{
+    text-align: center;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.para1{
+    text-align: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:25px;
+}
+
+.m2img {
+    width:800px;
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+    border-radius:10px;
+}
+section03{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:18px;
+}
+iframe{
+    width:100%;
+    height:350px;
+    background-color:white;
+   }
+section04{
+    padding-top:500px;
+    
+}
+.button{
+    font-size:20px;
+    background-color:#d4dcdc;
+    border-radius:8px;
+    padding:20px;
+    border-color:#7cc4c4;
+    justify-content: center;
+    color:#046c84;
+    width:10%;
+    height:75px;;
+    margin-top:20px;
+    transition:background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:white;
+}
+
+ footer{
+    background-color:#049bb2;
+    text-align: center;
+    font-size:20px;
+ }  
+ .rights{
+    background-color: #fff;
+ }
+
+
+
+ body {
+    margin: 0;
+    background-color: #97d1e9;
+}
+
+nav {
+    background-color: #7cc4c4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+}
+
+nav .logo img {
+    height: 60px; /* Adjust logo height */
+    margin-right: 10px; /* Space between logo and menu */
+}
+
+.menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.menu-icon {
+    display: none; /* Hide the hamburger icon by default */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Styles for mobile */
+@media (max-width: 768px) {
+    .menu-icon {
+        display:block; /* Show the hamburger icon on mobile */
+    }
+    
+    nav ul {
+        flex-direction:column; /* Stack menu items vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on the height of your logo and button */
+        right:90px;
+        width: 50%;
+        background-color: #7cc4c4;
+        display: none; /* Hide menu by default */
+    }
+
+    nav ul li {
+        text-align: center; /* Center text in mobile menu */
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; /* Show menu when checkbox is checked */
+    }
+
+    .logo img {
+        height: 50px; /* Smaller logo on mobile */
+    }
+
+    .mimg, .m2img {
+        width: 100%;
+    }
+
+    .para1 {
+        font-size: 16px; /* Smaller font size for better readability on mobile */
+    }
+
+    iframe {
+        height: 200px; /* Adjusted height for mobile */
+    }
+
+    .button {
+        width: 100%; /* Full width on mobile */
+        max-width: 100%; /* Ensure button fits on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 14px; /* Smaller font size for very small screens */
+    }
+
+    .mhead, .mhead2 {
+        font-size: 24px; /* Adjusted heading font size for smaller screens */
+    }
+
+    .para1 {
+        font-size: 14px; /* Smaller font size for very small screens */
+    }
+
+    .button {
+        font-size: 16px; /* Smaller button text for mobile */
+    }
+}
+

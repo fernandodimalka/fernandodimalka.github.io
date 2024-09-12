@@ -1,0 +1,88 @@
+.Dbody {
+    background-color: gainsboro;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust to full width of the grid cell */
+    height: 100%; /* Adjust to full height of the grid cell */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%; /* Set to 100% to fill the container */
+    height: 100%; /* Set to 100% to fill the container */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust to container width */
+    height: 100%; /* Adjust to container height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 10px;
+  }
+  
+  .overlay .text {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Grid container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column size and number of columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Optional padding around grid container */
+  }
+  
+  section01, section02 {
+    padding: 20px; /* Optional padding for sections */
+  }
+  
+  footer {
+    padding: 20px; /* Optional padding for footer */
+  }
+
+  
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .image-container {
+      width: 100%;
+      height: auto;
+  }
+
+  .overlay .text {
+      font-size: 18px;
+      padding: 15px;
+  }
+
+  .grid-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+      justify-content: center; /* Center items horizontally */
+      gap: 10px; /* Reduce gap between items */
+      padding: 10px; /* Reduce padding around grid container */
+  }
+
+  .image-container {
+      flex: 1 1 calc(50% - 10px); /* Two items per row with a gap */
+      max-width: calc(50% - 10px); /* Ensure items do not exceed half of the container width */
+  }
